@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class AmbientAudioPlayerBehaviour : MonoBehaviour {
 
-    private static AmbientAudioPlayerBehaviour instance = null;
+    //private static AmbientAudioPlayerBehaviour instance = null;
     private void Awake() {
-        if(instance == null)
+        /*if(instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -12,7 +12,7 @@ public class AmbientAudioPlayerBehaviour : MonoBehaviour {
         else if(instance != this)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
     public void FadeNewMusic(AudioClip clip)
