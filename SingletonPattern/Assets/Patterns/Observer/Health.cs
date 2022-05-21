@@ -5,7 +5,10 @@ using UnityEngine;
 public class Health : MonoBehaviour {
     [SerializeField] float fullHealth = 100f;
     [SerializeField] float drainPerSecond = 2f;
+
     float currentHealth = 0;
+
+    public event Action onHealthChange;
 
     private void Awake() {
         ResetHealth();
@@ -25,17 +28,31 @@ public class Health : MonoBehaviour {
         return currentHealth;
     }
 
+    public float GetFullHealth()
+    {
+        return fullHealth;
+    }
+
     void ResetHealth()
     {
         currentHealth = fullHealth;
+        if(onHealthChange != null)
+        {
+            onHealthChange();
+        }
     }
 
     private IEnumerator HealthDrain()
     {
         while (currentHealth > 0)
         {
+            if(onHealthChange != null)
+            {
+                onHealthChange();
+            }
             currentHealth -= drainPerSecond;
             yield return new WaitForSeconds(1);
         }
     }
+
 }
