@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 57130851}
   - component: {fileID: 57130850}
   - component: {fileID: 57130854}
+  - component: {fileID: 57130855}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -245,6 +246,20 @@ MonoBehaviour:
   displayText: {fileID: 1765671241}
   experienceText: {fileID: 118163330}
   increaseXPButton: {fileID: 1990422077}
+--- !u!114 &57130855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57130849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77f7d51fa8ef1d43a1992557449099a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1276342498}
+  healthBar: {fileID: 209387536}
 --- !u!1 &118163328
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +832,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullHealth: 100
   drainPerSecond: 2
-  healthBar: {fileID: 209387536}
 --- !u!114 &1276342499
 MonoBehaviour:
   m_ObjectHideFlags: 0
